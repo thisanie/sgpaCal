@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <div class="name-box data-box">
+          <label class="label">What is your name?</label>
+
+          <input type="text" placeholder="Enter your name" />
+        </div>
+        <div class="enroll-box data-box">
+          <label class="label">What is your Enroll?</label>
+
+          <input type="text" placeholder="Enrollnment" />
+        </div>
+      </div>
+      <button class="btn">click me</button>
+    </div>
+
+    <select id="list">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="Blank Test">Four</option>
+    </select>
+
+    <script type="text/javascript">
+      function listQ() {
+        var e = document.getElementById("list");
+        if (e.selectedIndex > 0) {
+          if ("Blank Test" === e.options[e.selectedIndex].value) {
+            alert("yo");
+          }
+        }
+      }
+      document.getElementById("list").addEventListener("click", listQ);
+    </script>
+  </body>
+</html>
